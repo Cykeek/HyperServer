@@ -1,0 +1,57 @@
+# Fags list
+alias ahmed='bash ~/scripts/id/ahmed.sh'
+alias cykeek='bash ~/scripts/id/cykeek.sh'
+alias hyper='bash ~/scripts/id/hyper.sh'
+alias flash='bash ~/scripts/id/flash.sh'
+alias karthick='bash ~/scripts/id/karthick.sh'
+alias siva='bash ~/scripts/id/sad.sh'
+alias nibaji='bash ~/scripts/id/nibaji.sh'
+alias raju='bash ~/scripts/id/raju.sh'
+alias royb='bash ~/scripts/id/royb.sh'
+alias roy='bash ~/scripts/id/royr.sh'
+alias sai='bash ~/scripts/id/sai.sh'
+alias gcs='bash ~/scripts/git/cs.sh'
+alias steve='bash ~/scripts/id/steve.sh'
+alias pravin='bash ~/scripts/id/pravin.sh'
+alias pratyaksh='bash ~/scripts/id/pratyaksh.sh'
+alias sharma='bash ~/scripts/id/sharmag.sh'
+
+# Git stuff
+alias id='bash ~/scripts/git/changeid.sh'
+alias g='git config user.name'
+alias ga='git commit --amend'
+alias gaa='git add *'
+alias gbd='git push $remote --delete $branch'
+alias gc='git cherry-pick'
+alias gck='git checkout'
+alias gcl='git clone'
+alias gpc='git cherry-pick --continue'
+alias gpa='git cherry-pick --abort'
+alias gf='git fetch'
+alias gra='git remote add'
+alias gcm='git commit'
+alias gl='git log'
+alias gp='git push'
+alias gpf='git push -f'
+alias gr='git revert'
+alias grh='git reset --hard'
+alias gs='git status'
+alias rs='bash ~/scripts/git/sync.sh'
+alias gce='bash ~/scripts/git/ce.sh'
+
+# Misc
+alias ram='sudo bash ~/scripts/misc/ram.sh'
+alias ds='dd if=/dev/zero of=/tmp/output bs=8k count=10k; rm -f /tmp/output'
+alias ntpf='sudo timedatectl set-ntp false && timedatectl'
+alias ntpt='sudo timedatectl set-ntp true && timedatectl'
+alias ntpr='sudo ntpd -qg'
+alias setntp='sudo timedatectl set-time'
+alias timed='timedatectl'
+alias romserver='hyper@hyper.remainsilent.net:/var/www/html/builds/roms/RM1851'
+
+# gdrive
+alias gup='bash ~/scripts/misc/gdrive/gup.sh'
+alias gshare='bash ~/scripts/misc/gdrive/gshare.sh'
+
+cp -a ~/scripts/.bashrc ~/
+#sudo cp -a ~/scripts/misc/repo /usr/local/bin/

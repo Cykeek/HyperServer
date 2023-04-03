@@ -1,0 +1,27 @@
+#!/bin/bash
+DEVICE=$1
+SERVERPORT=22022
+SERVERUSER=hyper
+SERVERHOST=hyper.remainsilent.net
+SERVERPATH=hypersync/builds/roms/$DEVICE/.
+SERVERLINK=http://$SERVERHOST/builds/roms/
+
+if [ "$1" = "" ]; then
+	echo -e "usage: ship [DEVICE]"
+	exit 1;
+else
+
+	if [ -d "out/target/product/$DEVICE" ]; then
+			BUILD=`find out/target/product/$DEVICE/*.zip|grep -iv ota|sort|tail -n1`
+		if [ -f "$BUILD" ]; then
+			echo -e "$BUILD"
+			scp -P $SERVERPORT $BUILD $SERVERUSER@$SERVERHOST:$SERVERPATH
+			ZIPFILE=`echo $BUILD|sed -s 's^out/target/product/^^g'`
+			echo -e "$SERVERLINK$ZIPFILE"
+		else
+			echo -e "Cant find $DEVICE zip"
+		fi
+	else
+		echo -e "Did you even build for $DEVICE yet?"
+	fi
+fi
